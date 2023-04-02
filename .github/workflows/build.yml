@@ -31,6 +31,7 @@ jobs:
       with:
         name: app-build
         path: |
-          dist/quaketimer.exe
+          quaketimer.exe
           config.ini
+          fonts/
         archive-format: zip
