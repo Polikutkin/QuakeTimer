@@ -27,11 +27,11 @@ jobs:
       run: pyinstaller --onefile --icon=icon.ico --name=quaketimer timer.py
 
     - name: Archive build artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: QuakeTimer
         path: |
-          dist/quaketimer.exe => timer/quaketimer.exe
-          config.ini => timer/config.ini
+          dist/quaketimer.exe => ../quaketimer.exe
+          config.ini
           fonts/
         archive-format: zip
