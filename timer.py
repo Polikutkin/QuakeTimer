@@ -68,7 +68,7 @@ class Clock:
         if time_left >= 0:
             label.config(text=str(time_left))
 
-            if time_left == cfg.sound_alarm_timeout_seconds:
+            if time_left == cfg.sound_alarm_timeout_seconds and cfg.enable_sound_alarm:
                 alrm.play_sound('mega')
 
             if time_left == 0 or time_left > cfg.mega_attention_timeout_seconds:
@@ -92,7 +92,7 @@ class Clock:
         if time_left >= 0:
             label.config(text=str(time_left))
 
-            if time_left == cfg.sound_alarm_timeout_seconds:
+            if time_left == cfg.sound_alarm_timeout_seconds and cfg.enable_sound_alarm:
                 alrm.play_sound('heavy')
 
             if time_left == 0 or time_left > cfg.heavy_attention_timeout_seconds:
