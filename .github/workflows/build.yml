@@ -31,7 +31,7 @@ jobs:
       with:
         name: QuakeTimer
         path: |
-          quaketimer.exe => dist/quaketimer.exe
-          config.ini
+          dist/quaketimer.exe => timer/quaketimer.exe
+          config.ini => timer/config.ini
           fonts/
         archive-format: zip
