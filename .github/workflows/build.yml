@@ -1,0 +1,36 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout source code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install pyinstaller
+        pip install -r requirements.txt
+
+    - name: Build executable
+      run: pyinstaller --onefile --icon=icon.ico --name=quaketimer timer.py
+
+    - name: Archive build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: app-build
+        path: |
+          dist/quaketimer.exe
+          config.ini
+        archive-format: zip
