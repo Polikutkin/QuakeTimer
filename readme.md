@@ -1,5 +1,7 @@
 Quake Timer
 ===========
+[![Build and Deploy](https://github.com/Polikutkin/QuakeTimer/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/Polikutkin/QuakeTimer/actions/workflows/build.yml)
+
 This small app was developed for those quake players who strugle with remembring timings for major items and powerups.
 All timer settings can be found and changed for your convenience.
 To show timer on top of the game, choose `Borderless` or `Windowed` option in video game settings.
