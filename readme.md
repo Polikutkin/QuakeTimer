@@ -40,3 +40,9 @@ These options can be applied independently for each major item.
 | warning\_text\_color        | string  | red       | Color of the warning phaze text            |
 | warning\_bg\_color          | string  | "#0246b3" | Background color of the warning phaze      |
 | start_key                   | string  | alt       | Keyboard key to start the timer            |
+
+Future plans
+---------------------
+- Add different types of alarms (e.g. `beep`, `beep-till-end`)
+- Implement automatic timer start based on the item pickup sound pattern
+- Implement automatic timer start based on voice commands
